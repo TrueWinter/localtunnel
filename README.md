@@ -7,7 +7,7 @@ Great for working with browser testing tools like browserling or external api ca
 ## Quickstart
 
 ```
-npx localtunnel --port 8000
+npx localtunnel-tw --port 8000
 ```
 
 ## Installation
@@ -15,30 +15,24 @@ npx localtunnel --port 8000
 ### Globally
 
 ```
-npm install -g localtunnel
-```
-
-### As a dependency in your project
-
-```
-yarn add localtunnel
+npm install -g TrueWinter/localtunnel
 ```
 
 ## CLI usage
 
-When localtunnel is installed globally, just use the `lt` command to start the tunnel.
+When localtunnel is installed globally, just use the `ltw` command to start the tunnel.
 
 ```
-lt --port 8000
+ltw --port 8000
 ```
 
 Thats it! It will connect to the tunnel server, setup the tunnel, and tell you what url to use for your testing. This url will remain active for the duration of your session; so feel free to share it with others for happy fun time!
 
-You can restart your local server all you want, `lt` is smart enough to detect this and reconnect once it is back.
+You can restart your local server all you want, `ltw` is smart enough to detect this and reconnect once it is back.
 
 ### Arguments
 
-Below are some common arguments. See `lt --help` for additional arguments
+Below are some common arguments. See `ltw --help` for additional arguments
 
 - `--subdomain` request a named subdomain on the localtunnel server (default is random characters)
 - `--local-host` proxy to a hostname other than localhost
@@ -46,7 +40,7 @@ Below are some common arguments. See `lt --help` for additional arguments
 You may also specify arguments via env variables. E.x.
 
 ```
-PORT=3000 lt
+PORT=3000 ltw
 ```
 
 ## API
@@ -58,7 +52,7 @@ The localtunnel client is also usable through an API (for test integration, auto
 Creates a new localtunnel to the specified local `port`. Will return a Promise that resolves once you have been assigned a public localtunnel url. `options` can be used to request a specific `subdomain`. A `callback` function can be passed, in which case it won't return a Promise. This exists for backwards compatibility with the old Node-style callback API. You may also pass a single options object with `port` as a property.
 
 ```js
-const localtunnel = require('localtunnel');
+const localtunnel = require('localtunnel-tw');
 
 (async () => {
   const tunnel = await localtunnel({ port: 3000 });
