@@ -1,3 +1,9 @@
+# 2.1.1 (2022-06-10)
+
+- Forked from the original repository
+- If local port goes down, try to reconnect instead of killing the tunnel
+- Changed code style (https://gist.github.com/TrueWinter/8eeb3999cd6984304754bc5ffcda315d)
+
 # 2.0.2 (2021-09-18)
 
 - Upgrade dependencies

@@ -1,13 +1,13 @@
 {
-  "name": "localtunnel",
+  "name": "localtunnel-tw",
   "description": "Expose localhost to the world",
-  "version": "2.0.2",
+  "version": "2.1.1",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/localtunnel/localtunnel.git"
+    "url": "https://github.com/TrueWinter/localtunnel.git"
   },
-  "author": "Roman Shtylman <shtylman@gmail.com>",
+  "author": "Nicholis du Toit",
   "contributors": [
     "Roman Shtylman <shtylman@gmail.com>",
     "Gert Hengeveld <gert@hichroma.com>",
@@ -15,19 +15,15 @@
   ],
   "main": "./localtunnel.js",
   "bin": {
-    "lt": "bin/lt.js"
+    "ltw": "bin/lt.js"
   },
   "scripts": {
-    "test": "mocha --reporter list --timeout 60000 -- *.spec.js"
   },
   "dependencies": {
     "axios": "0.21.4",
     "debug": "4.3.2",
     "openurl": "1.1.1",
     "yargs": "17.1.1"
-  },
-  "devDependencies": {
-    "mocha": "~9.1.1"
   },
   "engines": {
     "node": ">=8.3.0"
